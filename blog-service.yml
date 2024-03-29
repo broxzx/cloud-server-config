@@ -17,6 +17,25 @@ logging:
 #  pattern:
 #    console: "%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"
 
+#spring
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/security-service
+    username: postgres
+    password: root
+    driver-class-name: org.postgresql.Driver
+  #db
+  data:
+    mongodb:
+      host: localhost
+      port: 27017
+      database: blog-service
+      uri: mongodb://localhost/blog-service
+
+#jwt
+jwt:
+  token: 7e17e9833023788f29093965b2cc80a73294257ba5f7965edf2ebbd56021bf6d
+
 #actuator
 management:
   endpoints:

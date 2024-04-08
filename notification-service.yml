@@ -1,0 +1,52 @@
+server:
+  port: 0
+
+#spring
+spring:
+  rabbitmq:
+    username: user
+    password: password
+  mail:
+    activated: false
+    sender: example@gmail.com
+    host: smtp.gmail.com
+    port: 587
+    username:
+    password:
+    properties:
+      mail:
+        smtp:
+          auth: true
+        starttls:
+          enable: true
+
+#rabbit-variables
+rabbitmq:
+  queue: notifications-queue
+  routing-key: notification.push
+  exchange: notification-exchange
+
+#eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+
+#logging
+logging:
+  level:
+    root: info
+    web: info
+    sql: info
+
+#actuator
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always
+    info:
+      enabled: true
